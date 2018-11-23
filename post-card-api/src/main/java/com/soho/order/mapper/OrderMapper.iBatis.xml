@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.soho.order.mapper.OrderMapper">
+    <insert id="insertOrder" statementType="PREPARED">
+
+        INSERT INTO ppm_order (id, customer_taobao_id, urgent, processor_name, process_status, paper_type, processor_id, create_user_id, create_time, update_user_id, update_time)
+         VALUE (#{orderEntity.id},
+                #{orderEntity.customerTaobaoId},
+                #{orderEntity.urgent},
+                #{orderEntity.processorName},
+                #{orderEntity.processStatus},
+                #{orderEntity.paperType},
+                #{orderEntity.processorId},
+                #{orderEntity.createUserId},
+                current_time,
+                NULL,
+                NULL
+               )
+
+    </insert>
+</mapper>
