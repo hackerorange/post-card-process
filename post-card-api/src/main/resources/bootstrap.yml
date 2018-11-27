@@ -1,0 +1,9 @@
+spring:
+  profiles:
+    active: dev
+#  cloud:
+#    config:
+#      enabled: true
+#      uri: http://www.hackerorange.com:9101
+#      profile: dev
+#      name: ${spring.application.name}
